@@ -55,7 +55,7 @@ test:
     - pip
   commands:
     - pip check
-    - scalene --cli test/original/bm_mdp.py
+    - scalene run test/original/bm_mdp.py
 about:
   home: https://github.com/plasma-umass/scalene
   summary: A high-performance, high-precision CPU, GPU, and memory profiler for Python
