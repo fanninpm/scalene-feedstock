@@ -27,7 +27,7 @@ requirements:
   host:
     - python
     - pip
-    - setuptools >=65.5.0
+    - setuptools >=70.1
     - setuptools-scm >=8
     - cython
     - wheel
