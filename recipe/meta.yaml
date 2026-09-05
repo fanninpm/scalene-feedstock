@@ -1,5 +1,5 @@
 {% set name = "scalene" %}
-{% set version = "1.5.51" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   sha256: ad33b6ce79239b5a6aff4ec78fa576fe2076b46f78c4c7e5fbc78a927b83374d
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - scalene = scalene.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -36,10 +36,12 @@ requirements:
     - astunparse >=1.6.3  # [py<39]
     - cloudpickle >=2.2.1
     - jinja2 >=3.0.3
-    - numpy >=1.24.0,!=1.27
+    - numpy >=1.24.0,!=1.27  # [py<314]
+    - numpy >=2.3.4  #[py>=314]
     - nvidia-ml-py >=12.555.43  # [not osx]
     - psutil >=5.9.2
     - pydantic >=2.6
+    - pyyaml >=6.0
     - rich >=10.7.0
     - wheel >=0.36.1
 
